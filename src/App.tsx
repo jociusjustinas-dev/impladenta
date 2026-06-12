@@ -9,8 +9,11 @@ import { VisitProcessSection } from './components/sections/VisitProcessSection'
 import { WhyImpladentaSection } from './components/sections/WhyImpladentaSection'
 import { TrustBarSection } from './components/sections/TrustBarSection'
 import { NavigationBarSection } from './components/sections/NavigationBarSection'
+import { useSmoothScroll } from './hooks/useSmoothScroll'
 
 function App() {
+  useSmoothScroll()
+
   return (
     <div className="min-h-screen">
       <NavigationBarSection />

@@ -454,7 +454,10 @@ export function NavigationBarSection() {
           aria-hidden={!mobileOpen}
         >
           <div className="mx-auto w-full max-w-[var(--bf-container-lg)]">
-            <div className="bf-nav-mobile-panel__scroll flex w-full flex-col overflow-y-auto rounded-b-bf-md bg-lift-2 shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
+            <div
+              className="bf-nav-mobile-panel__scroll flex w-full flex-col overflow-y-auto rounded-b-bf-md bg-lift-2 shadow-[0_12px_40px_rgba(0,0,0,0.12)]"
+              data-lenis-prevent
+            >
                 <div className="flex flex-col gap-4 px-5 py-4">
                   <HeaderCta className="w-full justify-center" onClick={closeMobile} />
 

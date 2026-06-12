@@ -43,6 +43,20 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: var(--bf-nav-total);
+  }
+
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis [data-lenis-prevent] {
+    overscroll-behavior: contain;
   }
 
   body {

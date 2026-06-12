@@ -6,6 +6,7 @@ import {
   type ServicesBentoCard,
   type ServicesBentoCardVariant,
 } from '../../data/fallback'
+import { scrollToTarget } from '../../lib/smooth-scroll'
 import { BfCtaButton } from '../ui/BfCtaButton'
 import { BfSectionLabel } from '../ui/BfSectionLabel'
 import { BfIcon } from '../ui/BfIcon'
@@ -210,7 +211,7 @@ export function ServicesSplitSection() {
 
   const scrollToCard = (id: string) => {
     setActiveId(id)
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    scrollToTarget(`#${id}`)
   }
 
   const goPrevSlide = () => setActiveSlide((current) => Math.max(0, current - 1))
