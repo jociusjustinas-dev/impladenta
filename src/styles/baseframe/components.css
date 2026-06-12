@@ -1834,7 +1834,7 @@
   max-width: 18.75rem;
   margin-inline: auto;
   flex: none;
-  transform: translateY(8%) scale(1.1);
+  transform: translateY(17%) scale(1.18);
   transform-origin: bottom center;
 }
 
@@ -1950,7 +1950,7 @@
 
   .bf-why-bento__phone-image {
     max-width: 14.5rem;
-    transform: translateY(6%) scale(1.08);
+    transform: translateY(14%) scale(1.14);
   }
 
   .bf-why-bento__media-image {
@@ -1981,7 +1981,7 @@
 
   .bf-why-bento__phone-image {
     max-width: 12.5rem;
-    transform: translateY(5%) scale(1.06);
+    transform: translateY(12%) scale(1.12);
   }
 }
 
@@ -1992,7 +1992,7 @@
 
   .bf-why-bento__phone-image {
     max-width: 11rem;
-    transform: translateY(4%) scale(1.05);
+    transform: translateY(10%) scale(1.1);
   }
 }
 
