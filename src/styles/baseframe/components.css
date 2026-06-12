@@ -902,30 +902,25 @@
 
 @media screen and (min-width: 992px) {
   .bf-nav-bar {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
     padding-inline: var(--bf-nav-bar-pad-x);
   }
 
-  .bf-nav-logo-wrap {
-    grid-column: 1;
-    justify-self: start;
-    z-index: 2;
-  }
-
   .bf-nav-menu {
-    grid-column: 1 / -1;
-    grid-row: 1;
-    justify-self: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
     z-index: 1;
     width: max-content;
     max-width: calc(100% - 20rem);
-    transform: translateX(calc(var(--bf-nav-menu-optical-offset, 0px) * -1));
+    transform: translate(
+      calc(-50% - var(--bf-nav-menu-optical-offset, 0px)),
+      -50%
+    );
   }
 
+  .bf-nav-logo-wrap,
   .bf-nav-actions {
-    grid-column: 3;
-    justify-self: end;
+    position: relative;
     z-index: 2;
     flex: none;
   }
