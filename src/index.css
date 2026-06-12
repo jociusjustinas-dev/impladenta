@@ -1,0 +1,111 @@
+@import 'tailwindcss';
+@import './styles/fonts/bobolobo.css';
+@import './styles/baseframe/tokens.css';
+@import './styles/baseframe/typography.css';
+@import './styles/baseframe/components.css';
+
+/* Tailwind bridge — use Baseframe tokens as utilities (bg-ink, text-tone-strong, etc.) */
+@theme {
+  --font-sans: var(--bf-font-body);
+  --font-serif: var(--bf-font-heading);
+  --font-mono: var(--bf-font-label);
+  --color-ink: var(--bf-ink-base);
+  --color-ink-dark: var(--bf-ink-dark);
+  --color-ink-light: var(--bf-ink-light);
+  --color-accent: var(--bf-color-accent);
+  --color-accent-purple: var(--bf-color-accent-primary);
+  --color-lift: var(--bf-color-lift-light);
+  --color-lift-2: var(--bf-color-lift-light-2);
+  --color-tone-strong: var(--bf-tone-strong);
+  --color-tone-medium: var(--bf-tone-medium);
+  --color-tone-subtle: var(--bf-tone-subtle);
+  --color-tone-faint: var(--bf-tone-faint);
+  --color-border-subtle: var(--bf-border-subtle);
+  --color-border-medium: var(--bf-border-medium);
+  --color-success: var(--bf-color-success);
+  --color-error: var(--bf-color-error);
+  --color-warning: var(--bf-color-warning);
+
+  --radius-bf-sm: var(--bf-radius-sm);
+  --radius-bf-md: var(--bf-radius-md);
+  --radius-bf-lg: var(--bf-radius-lg);
+
+  --spacing-bf-page: var(--bf-page-padding);
+  --spacing-bf-section-sm: var(--bf-section-sm);
+  --spacing-bf-section-md: var(--bf-section-md);
+  --spacing-bf-section-lg: var(--bf-section-lg);
+
+  --breakpoint-bf-tablet: 991px;
+  --breakpoint-bf-mobile: 767px;
+  --breakpoint-bf-mobile-sm: 479px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    overflow-x: clip;
+    background-color: var(--bf-ink-base);
+    color: var(--bf-tone-strong);
+    font-family: var(--bf-font-body);
+    font-size: var(--bf-text-b2-size);
+    line-height: var(--bf-text-b2-line);
+    font-weight: var(--bf-weight-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    color: var(--bf-tone-strong);
+    font-family: var(--bf-font-heading);
+    font-weight: var(--bf-weight-heading);
+  }
+
+  p {
+    font-weight: var(--bf-weight-body);
+  }
+
+  h1 {
+    font-size: var(--bf-text-h1-size);
+    line-height: var(--bf-text-h1-line);
+    letter-spacing: var(--bf-text-h1-tracking);
+  }
+
+  h2 {
+    font-size: var(--bf-text-h2-size);
+    line-height: var(--bf-text-h2-line);
+    letter-spacing: var(--bf-text-h2-tracking);
+  }
+
+  h3 {
+    font-size: var(--bf-text-h3-size);
+    line-height: var(--bf-text-h3-line);
+    letter-spacing: var(--bf-text-h3-tracking);
+  }
+
+  h4 {
+    font-size: var(--bf-text-h4-size);
+    line-height: var(--bf-text-h4-line);
+    letter-spacing: var(--bf-text-h4-tracking);
+  }
+
+  h5 {
+    font-size: var(--bf-text-h5-size);
+    line-height: var(--bf-text-h5-line);
+    letter-spacing: var(--bf-text-h5-tracking);
+  }
+
+  h6 {
+    font-size: var(--bf-text-h6-size);
+    line-height: var(--bf-text-h6-line);
+    letter-spacing: var(--bf-text-h6-tracking);
+  }
+}

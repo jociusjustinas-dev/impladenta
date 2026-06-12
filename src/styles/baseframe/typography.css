@@ -1,0 +1,142 @@
+/* Baseframe™ typography — matches Webflow template */
+
+.bf-h0,
+h1.bf-h0 {
+  font-family: var(--bf-font-heading);
+  font-size: var(--bf-text-h0-size);
+  line-height: var(--bf-text-h0-line);
+  font-weight: var(--bf-weight-heading);
+  letter-spacing: var(--bf-text-h0-tracking);
+}
+
+.bf-h1,
+h1.bf-h1 {
+  font-family: var(--bf-font-heading);
+  font-size: var(--bf-text-h1-size);
+  line-height: var(--bf-text-h1-line);
+  font-weight: var(--bf-weight-heading);
+  letter-spacing: var(--bf-text-h1-tracking);
+}
+
+.bf-h2,
+h2.bf-h2 {
+  font-family: var(--bf-font-heading);
+  font-size: var(--bf-text-h2-size);
+  line-height: var(--bf-text-h2-line);
+  font-weight: var(--bf-weight-heading);
+  letter-spacing: var(--bf-text-h2-tracking);
+}
+
+.bf-section-headline,
+h2.bf-section-headline {
+  font-family: var(--bf-font-heading);
+  font-size: clamp(1.875rem, 3.4vw, var(--bf-text-h3-size));
+  line-height: var(--bf-text-h3-line);
+  font-weight: var(--bf-weight-heading);
+  letter-spacing: var(--bf-text-h3-tracking);
+}
+
+.bf-h3,
+h3.bf-h3 {
+  font-family: var(--bf-font-heading);
+  font-size: var(--bf-text-h3-size);
+  line-height: var(--bf-text-h3-line);
+  font-weight: var(--bf-weight-heading);
+  letter-spacing: var(--bf-text-h3-tracking);
+}
+
+.bf-h4,
+h4.bf-h4 {
+  font-family: var(--bf-font-heading);
+  font-size: var(--bf-text-h4-size);
+  line-height: var(--bf-text-h4-line);
+  font-weight: var(--bf-weight-heading);
+  letter-spacing: var(--bf-text-h4-tracking);
+}
+
+.bf-h5,
+h5.bf-h5 {
+  font-family: var(--bf-font-heading);
+  font-size: var(--bf-text-h5-size);
+  line-height: var(--bf-text-h5-line);
+  font-weight: var(--bf-weight-heading);
+  letter-spacing: var(--bf-text-h5-tracking);
+}
+
+.bf-h6,
+h6.bf-h6 {
+  font-family: var(--bf-font-heading);
+  font-size: var(--bf-text-h6-size);
+  line-height: var(--bf-text-h6-line);
+  font-weight: var(--bf-weight-heading);
+  letter-spacing: var(--bf-text-h6-tracking);
+}
+
+.bf-body-1 {
+  font-family: var(--bf-font-body);
+  font-size: var(--bf-text-b1-size);
+  line-height: var(--bf-text-b1-line);
+  font-weight: var(--bf-weight-body);
+}
+
+.bf-body-2 {
+  font-family: var(--bf-font-body);
+  font-size: var(--bf-text-b2-size);
+  line-height: var(--bf-text-b2-line);
+  font-weight: var(--bf-weight-body);
+}
+
+.bf-body-3 {
+  font-family: var(--bf-font-body);
+  font-size: var(--bf-text-b3-size);
+  line-height: var(--bf-text-b3-line);
+  font-weight: var(--bf-weight-body);
+}
+
+.bf-label-1 {
+  font-family: var(--bf-font-label);
+  font-size: var(--bf-text-label-1-size);
+  line-height: var(--bf-text-label-1-line);
+  font-weight: var(--bf-weight-body);
+  letter-spacing: var(--bf-text-label-1-tracking);
+  text-transform: uppercase;
+}
+
+.bf-label-2 {
+  font-family: var(--bf-font-label);
+  font-size: var(--bf-text-label-2-size);
+  line-height: var(--bf-text-label-2-line);
+  font-weight: var(--bf-weight-body);
+  letter-spacing: var(--bf-text-label-2-tracking);
+  text-transform: uppercase;
+}
+
+.bf-button-1 {
+  font-family: var(--bf-font-button);
+  font-size: var(--bf-text-button-1-size);
+  line-height: var(--bf-text-button-1-line);
+  font-weight: var(--bf-weight-button);
+}
+
+.bf-button-2 {
+  font-family: var(--bf-font-button);
+  font-size: var(--bf-text-button-2-size);
+  line-height: var(--bf-text-button-2-line);
+  font-weight: var(--bf-weight-button);
+}
+
+.bf-tone-strong {
+  color: var(--bf-tone-strong);
+}
+
+.bf-tone-medium {
+  color: var(--bf-tone-medium);
+}
+
+.bf-tone-subtle {
+  color: var(--bf-tone-subtle);
+}
+
+.bf-tone-faint {
+  color: var(--bf-tone-faint);
+}

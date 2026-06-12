@@ -1,0 +1,10 @@
+/* Parkinsans — https://bobolobo.webflow.io/ */
+
+@font-face {
+  font-family: Parkinsans;
+  src: url('https://cdn.prod.website-files.com/69088e9cbe595647126a3125/6908902da21e93fc4a8008a9_Parkinsans-VariableFont_wght.ttf')
+    format('truetype');
+  font-weight: 300 800;
+  font-style: normal;
+  font-display: swap;
+}
