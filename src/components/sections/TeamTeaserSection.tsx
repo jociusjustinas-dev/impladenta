@@ -1,14 +1,10 @@
 import { ArrowRight, Pause, Play, Volume2, VolumeX } from 'lucide-react'
 import { useEffect, useRef, useState, type CSSProperties } from 'react'
 import { teamTeaserContent, type TeamTeaserSlide } from '../../data/fallback'
+import { entranceClass } from '../../lib/entrance'
 import { BfCtaButton } from '../ui/BfCtaButton'
 import { BfSectionLabel } from '../ui/BfSectionLabel'
 import { BfIcon } from '../ui/BfIcon'
-
-const entranceClass = (visible: boolean) =>
-  `transition-all duration-700 ease-out ${
-    visible ? 'translate-y-0 opacity-100 blur-0' : 'translate-y-[50px] opacity-0 blur-[12px]'
-  }`
 
 function SliderNavButton({
   direction,
@@ -256,7 +252,7 @@ export function TeamTeaserSection() {
   }
 
   const trackStyle = {
-    transform: `translateX(${trackOffset}px)`,
+    marginLeft: `${trackOffset}px`,
   } as CSSProperties
 
   return (
@@ -265,7 +261,7 @@ export function TeamTeaserSection() {
         <div className="bf-container mx-auto w-full max-w-[var(--bf-container-lg)]">
           <header
             ref={headerRef}
-            className={`bf-team-teaser__header ${entranceClass(headerVisible)}`}
+            className={`bf-team-teaser__header ${entranceClass(headerVisible, true)}`}
           >
             <BfSectionLabel tone="on-dark">{label}</BfSectionLabel>
             <div className="bf-team-teaser__header-row">
@@ -286,7 +282,7 @@ export function TeamTeaserSection() {
 
       <div
         ref={sliderRef}
-        className={`bf-team-teaser__slider ${entranceClass(sliderVisible)}`}
+        className={`bf-team-teaser__slider ${entranceClass(sliderVisible, true)}`}
         style={{ transitionDelay: '100ms' }}
       >
         <div ref={viewportRef} className="bf-team-teaser__viewport">
@@ -295,7 +291,7 @@ export function TeamTeaserSection() {
             className={`bf-team-teaser__track ${trackTransition ? '' : 'bf-team-teaser__track--instant'}`}
             style={trackStyle}
             onTransitionEnd={(event) => {
-              if (event.target !== event.currentTarget || event.propertyName !== 'transform') return
+              if (event.target !== event.currentTarget || event.propertyName !== 'margin-left') return
               normalizeLoopIndex()
             }}
           >

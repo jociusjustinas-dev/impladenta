@@ -1,12 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { visitProcessContent, type VisitProcessStep } from '../../data/fallback'
 import { BfCtaButton } from '../ui/BfCtaButton'
+import { entranceClass } from '../../lib/entrance'
 import { BfSectionLabel } from '../ui/BfSectionLabel'
-
-const entranceClass = (visible: boolean) =>
-  `transition-all duration-700 ease-out ${
-    visible ? 'translate-y-0 opacity-100 blur-0' : 'translate-y-[50px] opacity-0 blur-[12px]'
-  }`
 
 const cardEntranceClass = (visible: boolean) =>
   `transition-all duration-700 ease-out ${visible ? 'opacity-100' : 'opacity-0'}`
@@ -94,7 +90,7 @@ export function VisitProcessSection() {
         <div className="bf-container mx-auto w-full max-w-[var(--bf-container-lg)]">
           <header
             ref={setRef(0)}
-            className={`bf-visit-process__header ${entranceClass(isVisible(0))}`}
+            className={`bf-visit-process__header ${entranceClass(isVisible(0), true)}`}
           >
             <BfSectionLabel tone="on-dark">{label}</BfSectionLabel>
             <div className="bf-visit-process__header-row">

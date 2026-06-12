@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { BfCtaButton } from '../ui/BfCtaButton'
 import { heroContent, testimonialsContent } from '../../data/fallback'
+import { entranceClass } from '../../lib/entrance'
 import { BfGoogleRatingRow } from '../ui/BfGoogleRatingRow'
 
 const HERO_IMAGE_SRC = '/images/hero.jpg'
@@ -20,17 +21,12 @@ const BLUR_LAYERS = [
   { blur: '0.3px', mask: 'linear-gradient(#0000 70%, #000 90%, #0000 100%)' },
 ]
 
-const entranceClass = (visible: boolean) =>
-  `transition-all duration-700 ease-out ${
-    visible ? 'translate-y-0 opacity-100' : 'translate-y-[50px] opacity-0'
-  }`
-
 function HeroCtaButton({ href, label }: { href: string; label: string }) {
-  return <BfCtaButton href={href} label={label} variant="accent" className="text-tone-strong backdrop-blur-sm" />
+  return <BfCtaButton href={href} label={label} variant="accent" className="text-tone-strong" />
 }
 
 function HeroGhostButton({ href, label }: { href: string; label: string }) {
-  return <BfCtaButton href={href} label={label} variant="ghost" className="backdrop-blur-sm" />
+  return <BfCtaButton href={href} label={label} variant="ghost" />
 }
 
 function DayTimeline({

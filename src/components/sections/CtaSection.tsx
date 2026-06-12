@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { finalCtaContent } from '../../data/fallback'
 import { Footer } from '../Footer'
 import { BfCtaButton } from '../ui/BfCtaButton'
+import { entranceClass } from '../../lib/entrance'
 import { BfSectionLabel } from '../ui/BfSectionLabel'
 
 const BLUR_LAYERS = [
@@ -16,11 +17,6 @@ const BLUR_LAYERS = [
   { blur: '0.6px', mask: 'linear-gradient(#0000 60%, #000 80% 90%, #0000 100%)' },
   { blur: '0.3px', mask: 'linear-gradient(#0000 70%, #000 90%, #0000 100%)' },
 ]
-
-const entranceClass = (visible: boolean) =>
-  `transition-all duration-700 ease-out ${
-    visible ? 'translate-y-0 opacity-100 blur-0' : 'translate-y-[50px] opacity-0 blur-[12px]'
-  }`
 
 export function CtaSection() {
   const { label, headlineLines, subheadline, cta, image } = finalCtaContent
@@ -82,7 +78,7 @@ export function CtaSection() {
       <div className="bf-shell-px bf-final-cta__frame">
         <div className="bf-final-cta__shell">
           <div className="bf-container mx-auto w-full max-w-[var(--bf-container-lg)]">
-            <div className={`bf-final-cta__content ${entranceClass(visible)}`}>
+            <div className={`bf-final-cta__content ${entranceClass(visible, true)}`}>
               <BfSectionLabel tone="on-dark">{label}</BfSectionLabel>
 
               <h2 id="final-cta-heading" className="bf-section-headline bf-final-cta__headline m-0 text-ink">

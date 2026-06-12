@@ -6,15 +6,11 @@ import {
   type ServicesBentoCard,
   type ServicesBentoCardVariant,
 } from '../../data/fallback'
+import { entranceClass } from '../../lib/entrance'
 import { scrollToTarget } from '../../lib/smooth-scroll'
 import { BfCtaButton } from '../ui/BfCtaButton'
 import { BfSectionLabel } from '../ui/BfSectionLabel'
 import { BfIcon } from '../ui/BfIcon'
-
-const entranceClass = (visible: boolean) =>
-  `transition-all duration-700 ease-out ${
-    visible ? 'translate-y-0 opacity-100' : 'translate-y-[50px] opacity-0'
-  }`
 
 function useInView(threshold = 0.12) {
   const ref = useRef<HTMLDivElement>(null)

@@ -1,15 +1,11 @@
 import { Star } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { testimonialsContent, type TestimonialReview } from '../../data/fallback'
+import { entranceClass } from '../../lib/entrance'
 import { BfCtaButton } from '../ui/BfCtaButton'
 import { BfGoogleRatingRow } from '../ui/BfGoogleRatingRow'
 import { BfSectionLabel } from '../ui/BfSectionLabel'
 import { BfIcon } from '../ui/BfIcon'
-
-const entranceClass = (visible: boolean) =>
-  `transition-all duration-700 ease-out ${
-    visible ? 'translate-y-0 opacity-100 blur-0' : 'translate-y-[50px] opacity-0 blur-[12px]'
-  }`
 
 function TestimonialCard({ text, author, image, imageAlt }: TestimonialReview) {
   return (
@@ -109,7 +105,7 @@ export function TestimonialsSection() {
         <div className="bf-container mx-auto w-full max-w-[var(--bf-container-lg)]">
           <header
             ref={headerRef}
-            className={`bf-testimonials__header ${entranceClass(headerVisible)}`}
+            className={`bf-testimonials__header ${entranceClass(headerVisible, true)}`}
           >
             <div className="bf-section-intro bf-section-intro--center bf-testimonials__header-copy">
               <BfSectionLabel tone="light">{label}</BfSectionLabel>

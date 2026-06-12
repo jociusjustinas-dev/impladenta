@@ -5,16 +5,12 @@ import {
   type ServicesBentoCard,
   type ServicesBentoCardVariant,
 } from '../../data/fallback'
+import { entranceClass } from '../../lib/entrance'
 import { BfCtaButton } from '../ui/BfCtaButton'
 import { BfSectionLabel } from '../ui/BfSectionLabel'
 import { BfIcon } from '../ui/BfIcon'
 
 const slides = servicesBentoContent.rows.flat()
-
-const entranceClass = (visible: boolean) =>
-  `transition-all duration-700 ease-out ${
-    visible ? 'translate-y-0 opacity-100' : 'translate-y-[50px] opacity-0'
-  }`
 
 function SlideCta({ variant }: { variant: ServicesBentoCardVariant }) {
   const { ctaLabel } = servicesBentoContent

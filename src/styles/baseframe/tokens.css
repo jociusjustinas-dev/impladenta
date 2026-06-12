@@ -65,10 +65,11 @@
   --bf-border-strong: var(--bf-color-dark-64);
   --bf-border-faint: var(--bf-color-dark-8);
 
-  /* Glass — #27241F + background blur */
+  /* Glass — #27241F + backdrop blur */
   --bf-glass-base: #27241f;
-  --bf-glass-fill: rgb(39 36 31 / 0.36);
-  --bf-glass-blur: 18px;
+  --bf-glass-fill: rgb(39 36 31 / 0.32);
+  --bf-glass-blur: 24px;
+  --bf-glass-backdrop: blur(var(--bf-glass-blur)) saturate(1.15);
   --bf-glass-border: var(--bf-color-light-16);
   --bf-glass-faint: rgb(39 36 31 / 0.18);
   --bf-glass-soft: rgb(39 36 31 / 0.28);

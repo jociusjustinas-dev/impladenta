@@ -7,12 +7,8 @@ import {
 } from '../../data/fallback'
 import { BfCtaButton } from '../ui/BfCtaButton'
 import { BfIcon } from '../ui/BfIcon'
+import { entranceClass } from '../../lib/entrance'
 import { BfSectionLabel } from '../ui/BfSectionLabel'
-
-const entranceClass = (visible: boolean) =>
-  `transition-all duration-700 ease-out ${
-    visible ? 'translate-y-0 opacity-100 blur-0' : 'translate-y-[50px] opacity-0 blur-[12px]'
-  }`
 
 function useRevealOnScroll(count: number, threshold = 0.12) {
   const [visibleItems, setVisibleItems] = useState<Set<number>>(() => new Set())
@@ -122,7 +118,7 @@ function StatRow({
   return (
     <div
       ref={setRef}
-      className={`bf-before-after__stat ${entranceClass(visible)}`}
+      className={`bf-before-after__stat ${entranceClass(visible, true)}`}
       style={{ transitionDelay: `${delayMs}ms` }}
     >
       <p className="bf-label-1 m-0 text-tone-strong">{stat.label}</p>
@@ -236,7 +232,7 @@ export function BeforeAfterSection() {
         <div className="bf-container mx-auto w-full max-w-[var(--bf-container-lg)]">
           <header
             ref={headerRef}
-            className={`bf-before-after__header ${entranceClass(headerVisible)}`}
+            className={`bf-before-after__header ${entranceClass(headerVisible, true)}`}
           >
             <BfSectionLabel tone="light">{label}</BfSectionLabel>
             <div className="bf-before-after__header-row">
@@ -259,7 +255,7 @@ export function BeforeAfterSection() {
 
           <div
             ref={mediaRef}
-            className={`bf-before-after__showcase ${entranceClass(mediaVisible)}`}
+            className={`bf-before-after__showcase ${entranceClass(mediaVisible, true)}`}
             style={{ transitionDelay: '100ms' }}
           >
             <div className="bf-before-after__media">

@@ -7,12 +7,8 @@ import {
 } from '../../data/fallback'
 import { BfCtaButton } from '../ui/BfCtaButton'
 import { BfSectionLabel } from '../ui/BfSectionLabel'
+import { entranceClass } from '../../lib/entrance'
 import { BfIcon } from '../ui/BfIcon'
-
-const entranceClass = (visible: boolean) =>
-  `transition-all duration-700 ease-out ${
-    visible ? 'translate-y-0 opacity-100 blur-0' : 'translate-y-[50px] opacity-0 blur-[12px]'
-  }`
 
 const optionIcons: Record<FinancingOptionIcon, LucideIcon> = {
   deferred: CalendarClock,
@@ -70,7 +66,7 @@ export function FinancingTeaserSection() {
     <section className="bf-financing-teaser bf-section">
       <div className="bf-shell-px">
         <div className="bf-container mx-auto w-full max-w-[var(--bf-container-lg)]">
-          <div ref={panelRef} className={`bf-financing-teaser__panel ${entranceClass(visible)}`}>
+          <div ref={panelRef} className={`bf-financing-teaser__panel ${entranceClass(visible, true)}`}>
             <div className="bf-financing-teaser__glow" aria-hidden />
 
             <div className="bf-financing-teaser__layout">

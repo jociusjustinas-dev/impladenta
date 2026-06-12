@@ -154,12 +154,18 @@
   color: var(--bf-tone-strong);
 }
 
-/* Glass tiles — #27241F @ 44% + background blur 12 */
+/* Glass — semi-transparent fill + backdrop blur (needs untransformed ancestors) */
+.bf-glass-surface {
+  background-color: var(--bf-glass-fill);
+  -webkit-backdrop-filter: var(--bf-glass-backdrop);
+  backdrop-filter: var(--bf-glass-backdrop);
+}
+
 .bf-glass-tile {
   border: 1px solid var(--bf-glass-border);
   background-color: var(--bf-glass-fill);
-  backdrop-filter: blur(var(--bf-glass-blur));
-  -webkit-backdrop-filter: blur(var(--bf-glass-blur));
+  -webkit-backdrop-filter: var(--bf-glass-backdrop);
+  backdrop-filter: var(--bf-glass-backdrop);
 }
 
 .bf-glass-tile--soft {
@@ -183,8 +189,8 @@
   color: var(--bf-btn-primary-text);
   border-color: var(--bf-color-light-16);
   background-color: var(--bf-glass-fill);
-  backdrop-filter: blur(var(--bf-glass-blur));
-  -webkit-backdrop-filter: blur(var(--bf-glass-blur));
+  -webkit-backdrop-filter: var(--bf-glass-backdrop);
+  backdrop-filter: var(--bf-glass-backdrop);
 }
 
 .bf-btn--nav-cta:hover {
@@ -222,8 +228,8 @@
   z-index: 1;
   border: 1px solid transparent;
   border-radius: var(--bf-radius-button);
-  backdrop-filter: blur(var(--bf-glass-blur));
-  -webkit-backdrop-filter: blur(var(--bf-glass-blur));
+  -webkit-backdrop-filter: var(--bf-glass-backdrop);
+  backdrop-filter: var(--bf-glass-backdrop);
   transform: scale(1);
   transform-origin: center;
   transition:
@@ -232,8 +238,8 @@
     transform var(--bf-btn-icon-duration) var(--bf-btn-cover-ease);
 }
 
-.bf-cta:hover .bf-cta__bg,
-.bf-cta:focus-visible .bf-cta__bg {
+.bf-cta:not(.bf-cta--ghost-on-dark):hover .bf-cta__bg,
+.bf-cta:not(.bf-cta--ghost-on-dark):focus-visible .bf-cta__bg {
   transform: scale(0.95);
 }
 
@@ -887,6 +893,27 @@
     var(--bf-nav-bar-pad-x);
 }
 
+@media screen and (min-width: 992px) {
+  .bf-nav-bar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+  }
+
+  .bf-nav-logo-wrap {
+    justify-self: start;
+  }
+
+  .bf-nav-menu {
+    justify-self: center;
+  }
+
+  .bf-nav-actions {
+    flex: none;
+    justify-self: end;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .bf-nav-bar {
     padding-inline: var(--bf-nav-bar-pad-x);
@@ -1019,8 +1046,8 @@
   padding: var(--bf-space-xxxs);
   border: 1px solid var(--bf-color-light-16);
   background-color: var(--bf-glass-fill);
-  backdrop-filter: blur(var(--bf-glass-blur));
-  -webkit-backdrop-filter: blur(var(--bf-glass-blur));
+  -webkit-backdrop-filter: var(--bf-glass-backdrop);
+  backdrop-filter: var(--bf-glass-backdrop);
 }
 
 .bf-hero-timeline-card__title {
@@ -1976,8 +2003,8 @@
   gap: var(--bf-space-nano);
   border-radius: var(--bf-radius-button);
   padding: var(--bf-space-nano) var(--bf-space-xxxs);
-  backdrop-filter: blur(var(--bf-glass-blur));
-  -webkit-backdrop-filter: blur(var(--bf-glass-blur));
+  -webkit-backdrop-filter: var(--bf-glass-backdrop);
+  backdrop-filter: var(--bf-glass-backdrop);
 }
 
 .bf-section-intro {
@@ -2195,8 +2222,8 @@
   background-color: var(--bf-glass-fill);
   color: var(--bf-ink-light);
   cursor: pointer;
-  backdrop-filter: blur(var(--bf-glass-blur));
-  -webkit-backdrop-filter: blur(var(--bf-glass-blur));
+  -webkit-backdrop-filter: var(--bf-glass-backdrop);
+  backdrop-filter: var(--bf-glass-backdrop);
   transition:
     background-color 0.3s ease,
     color 0.3s ease,
@@ -2223,8 +2250,8 @@
   display: flex;
   width: max-content;
   gap: var(--bf-team-teaser-slide-gap);
-  transition: transform 0.5s ease-in-out;
-  will-change: transform;
+  transition: margin-left 0.5s ease-in-out;
+  will-change: margin-left;
 }
 
 .bf-team-teaser__track--instant {
@@ -2309,8 +2336,8 @@
   background-color: var(--bf-glass-fill);
   color: var(--bf-ink-light);
   cursor: pointer;
-  backdrop-filter: blur(var(--bf-glass-blur));
-  -webkit-backdrop-filter: blur(var(--bf-glass-blur));
+  -webkit-backdrop-filter: var(--bf-glass-backdrop);
+  backdrop-filter: var(--bf-glass-backdrop);
   transition:
     background-color 0.3s ease,
     color 0.3s ease,
@@ -2345,8 +2372,8 @@
   border-radius: var(--bf-radius-button);
   background-color: var(--bf-glass-fill);
   padding: var(--bf-space-nano) var(--bf-space-xxxs);
-  backdrop-filter: blur(var(--bf-glass-blur));
-  -webkit-backdrop-filter: blur(var(--bf-glass-blur));
+  -webkit-backdrop-filter: var(--bf-glass-backdrop);
+  backdrop-filter: var(--bf-glass-backdrop);
 }
 
 .bf-team-teaser__card-copy {
@@ -2747,8 +2774,8 @@
   background-color: var(--bf-glass-fill);
   color: var(--bf-ink-light);
   cursor: pointer;
-  backdrop-filter: blur(var(--bf-glass-blur));
-  -webkit-backdrop-filter: blur(var(--bf-glass-blur));
+  -webkit-backdrop-filter: var(--bf-glass-backdrop);
+  backdrop-filter: var(--bf-glass-backdrop);
   transition:
     background-color 0.3s ease,
     transform 0.3s ease;
@@ -2776,8 +2803,8 @@
   background-color: var(--bf-glass-fill);
   color: var(--bf-ink-light);
   white-space: nowrap;
-  backdrop-filter: blur(var(--bf-glass-blur));
-  -webkit-backdrop-filter: blur(var(--bf-glass-blur));
+  -webkit-backdrop-filter: var(--bf-glass-backdrop);
+  backdrop-filter: var(--bf-glass-backdrop);
 }
 
 .bf-before-after__quote-card {
@@ -3057,8 +3084,8 @@
   border: 1px solid var(--bf-color-light-16);
   border-radius: var(--bf-radius-md);
   background-color: var(--bf-glass-fill);
-  backdrop-filter: blur(var(--bf-glass-blur));
-  -webkit-backdrop-filter: blur(var(--bf-glass-blur));
+  -webkit-backdrop-filter: var(--bf-glass-backdrop);
+  backdrop-filter: var(--bf-glass-backdrop);
 }
 
 .bf-financing-teaser__price {
@@ -3163,7 +3190,6 @@
 }
 
 .bf-site-footer {
-  overflow: hidden;
   border-radius: var(--bf-radius-sm);
   background-color: transparent;
 }
@@ -3185,8 +3211,8 @@
 .bf-final-cta .bf-site-footer__legal {
   border: 1px solid var(--bf-color-light-16);
   background-color: var(--bf-glass-fill);
-  backdrop-filter: blur(var(--bf-glass-blur));
-  -webkit-backdrop-filter: blur(var(--bf-glass-blur));
+  -webkit-backdrop-filter: var(--bf-glass-backdrop);
+  backdrop-filter: var(--bf-glass-backdrop);
 }
 
 .bf-site-footer__legal {
@@ -3315,10 +3341,10 @@
   background-image: linear-gradient(
     180deg,
     transparent 0%,
-    var(--bf-color-dark-8) 28%,
-    var(--bf-color-dark-32) 48%,
-    var(--bf-color-dark-64) 68%,
-    var(--bf-color-dark-64) 100%
+    var(--bf-color-dark-8) 32%,
+    var(--bf-color-dark-32) 52%,
+    rgb(39 36 31 / 0.44) 72%,
+    rgb(39 36 31 / 0.44) 100%
   );
   pointer-events: none;
 }
@@ -3401,8 +3427,8 @@
   line-height: var(--bf-text-button-line);
   font-weight: var(--bf-weight-button);
   cursor: pointer;
-  backdrop-filter: blur(var(--bf-glass-blur));
-  -webkit-backdrop-filter: blur(var(--bf-glass-blur));
+  -webkit-backdrop-filter: var(--bf-glass-backdrop);
+  backdrop-filter: var(--bf-glass-backdrop);
   transition:
     background-color 0.3s ease,
     border-color 0.3s ease,
