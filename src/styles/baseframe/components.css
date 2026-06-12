@@ -154,11 +154,10 @@
   color: var(--bf-tone-strong);
 }
 
-/* Glass tiles — rgba(85,85,85,0.12) + blur 6.6px + soft shadow */
+/* Glass tiles — #27241F @ 44% + background blur 12 */
 .bf-glass-tile {
   border: 1px solid var(--bf-glass-border);
   background-color: var(--bf-glass-fill);
-  box-shadow: var(--bf-glass-shadow);
   backdrop-filter: blur(var(--bf-glass-blur));
   -webkit-backdrop-filter: blur(var(--bf-glass-blur));
 }
@@ -184,7 +183,6 @@
   color: var(--bf-btn-primary-text);
   border-color: var(--bf-color-light-16);
   background-color: var(--bf-glass-fill);
-  box-shadow: var(--bf-glass-shadow);
   backdrop-filter: blur(var(--bf-glass-blur));
   -webkit-backdrop-filter: blur(var(--bf-glass-blur));
 }
@@ -224,7 +222,6 @@
   z-index: 1;
   border: 1px solid transparent;
   border-radius: var(--bf-radius-button);
-  box-shadow: var(--bf-glass-shadow);
   backdrop-filter: blur(var(--bf-glass-blur));
   -webkit-backdrop-filter: blur(var(--bf-glass-blur));
   transform: scale(1);
@@ -437,14 +434,14 @@
 }
 
 .bf-cta--ghost-on-dark .bf-cta__bg {
-  background-color: transparent;
-  border-color: var(--bf-color-light-48);
+  background-color: var(--bf-glass-fill);
+  border-color: var(--bf-glass-border);
 }
 
 .bf-cta--ghost-on-dark:hover .bf-cta__bg,
 .bf-cta--ghost-on-dark:focus-visible .bf-cta__bg {
-  background-color: var(--bf-color-dark-32);
-  border-color: var(--bf-color-light-64);
+  background-color: var(--bf-glass-strong);
+  border-color: var(--bf-color-light-32);
 }
 
 .bf-nav-dropdown-item:hover {
@@ -1022,7 +1019,6 @@
   padding: var(--bf-space-xxxs);
   border: 1px solid var(--bf-color-light-16);
   background-color: var(--bf-glass-fill);
-  box-shadow: var(--bf-glass-shadow);
   backdrop-filter: blur(var(--bf-glass-blur));
   -webkit-backdrop-filter: blur(var(--bf-glass-blur));
 }
@@ -1980,7 +1976,6 @@
   gap: var(--bf-space-nano);
   border-radius: var(--bf-radius-button);
   padding: var(--bf-space-nano) var(--bf-space-xxxs);
-  box-shadow: var(--bf-glass-shadow);
   backdrop-filter: blur(var(--bf-glass-blur));
   -webkit-backdrop-filter: blur(var(--bf-glass-blur));
 }
@@ -2200,7 +2195,6 @@
   background-color: var(--bf-glass-fill);
   color: var(--bf-ink-light);
   cursor: pointer;
-  box-shadow: var(--bf-glass-shadow);
   backdrop-filter: blur(var(--bf-glass-blur));
   -webkit-backdrop-filter: blur(var(--bf-glass-blur));
   transition:
@@ -2315,7 +2309,6 @@
   background-color: var(--bf-glass-fill);
   color: var(--bf-ink-light);
   cursor: pointer;
-  box-shadow: var(--bf-glass-shadow);
   backdrop-filter: blur(var(--bf-glass-blur));
   -webkit-backdrop-filter: blur(var(--bf-glass-blur));
   transition:
@@ -2352,7 +2345,6 @@
   border-radius: var(--bf-radius-button);
   background-color: var(--bf-glass-fill);
   padding: var(--bf-space-nano) var(--bf-space-xxxs);
-  box-shadow: var(--bf-glass-shadow);
   backdrop-filter: blur(var(--bf-glass-blur));
   -webkit-backdrop-filter: blur(var(--bf-glass-blur));
 }
@@ -2755,7 +2747,6 @@
   background-color: var(--bf-glass-fill);
   color: var(--bf-ink-light);
   cursor: pointer;
-  box-shadow: var(--bf-glass-shadow);
   backdrop-filter: blur(var(--bf-glass-blur));
   -webkit-backdrop-filter: blur(var(--bf-glass-blur));
   transition:
@@ -2785,7 +2776,6 @@
   background-color: var(--bf-glass-fill);
   color: var(--bf-ink-light);
   white-space: nowrap;
-  box-shadow: var(--bf-glass-shadow);
   backdrop-filter: blur(var(--bf-glass-blur));
   -webkit-backdrop-filter: blur(var(--bf-glass-blur));
 }
@@ -3067,7 +3057,6 @@
   border: 1px solid var(--bf-color-light-16);
   border-radius: var(--bf-radius-md);
   background-color: var(--bf-glass-fill);
-  box-shadow: var(--bf-glass-shadow);
   backdrop-filter: blur(var(--bf-glass-blur));
   -webkit-backdrop-filter: blur(var(--bf-glass-blur));
 }
@@ -3196,7 +3185,6 @@
 .bf-final-cta .bf-site-footer__legal {
   border: 1px solid var(--bf-color-light-16);
   background-color: var(--bf-glass-fill);
-  box-shadow: var(--bf-glass-shadow);
   backdrop-filter: blur(var(--bf-glass-blur));
   -webkit-backdrop-filter: blur(var(--bf-glass-blur));
 }
@@ -3413,7 +3401,6 @@
   line-height: var(--bf-text-button-line);
   font-weight: var(--bf-weight-button);
   cursor: pointer;
-  box-shadow: var(--bf-glass-shadow);
   backdrop-filter: blur(var(--bf-glass-blur));
   -webkit-backdrop-filter: blur(var(--bf-glass-blur));
   transition:

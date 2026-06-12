@@ -65,15 +65,15 @@
   --bf-border-strong: var(--bf-color-dark-64);
   --bf-border-faint: var(--bf-color-dark-8);
 
-  /* Glass — css.glass style; borders kept per component */
-  --bf-glass-fill: rgb(85 85 85 / 0.12);
-  --bf-glass-blur: 6.6px;
-  --bf-glass-shadow: 0 4px 30px rgb(0 0 0 / 0.1);
+  /* Glass — Figma: #27241F @ 44% + background blur 12 */
+  --bf-glass-base: #27241f;
+  --bf-glass-fill: rgb(39 36 31 / 0.44);
+  --bf-glass-blur: 12px;
   --bf-glass-border: var(--bf-color-light-16);
-  --bf-glass-faint: rgb(85 85 85 / 0.06);
-  --bf-glass-soft: rgb(85 85 85 / 0.09);
+  --bf-glass-faint: rgb(39 36 31 / 0.2);
+  --bf-glass-soft: rgb(39 36 31 / 0.32);
   --bf-glass-medium: var(--bf-glass-fill);
-  --bf-glass-strong: rgb(85 85 85 / 0.2);
+  --bf-glass-strong: rgb(39 36 31 / 0.56);
 
   --bf-lift-one: var(--bf-color-lift-light);
   --bf-lift-two: var(--bf-color-lift-light-2);

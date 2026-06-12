@@ -88,8 +88,8 @@ export const servicesBentoContent = {
         description: 'Su laikinais dantimis išeini tą pačią dieną — spausdiname juos patys.',
         href: '/paslaugos/implantacija',
         variant: 'featured-dark',
-        image: '/images/hero-consultation.png',
-        imagePosition: '50% 32%',
+        image: '/images/hero.jpg',
+        imagePosition: '52% 40%',
       },
       {
         id: 'protezavimas',
