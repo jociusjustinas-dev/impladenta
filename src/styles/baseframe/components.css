@@ -154,10 +154,10 @@
   color: var(--bf-tone-strong);
 }
 
-/* Baseframe glass tiles — dark translucent surfaces over imagery */
+/* Glass tiles — #1E1C1B @ 32% fill + uniform background blur */
 .bf-glass-tile {
-  border: 1px solid var(--bf-color-light-16);
-  background-color: var(--bf-glass-medium);
+  border: 1px solid var(--bf-glass-border);
+  background-color: var(--bf-glass-fill);
   backdrop-filter: blur(var(--bf-glass-blur));
   -webkit-backdrop-filter: blur(var(--bf-glass-blur));
 }
@@ -1018,7 +1018,7 @@
   border-radius: var(--bf-radius-sm);
   padding: var(--bf-space-xxxs);
   border: 1px solid var(--bf-color-light-16);
-  background-color: var(--bf-glass-strong);
+  background-color: var(--bf-glass-fill);
   backdrop-filter: blur(var(--bf-glass-blur));
   -webkit-backdrop-filter: blur(var(--bf-glass-blur));
 }
@@ -2750,7 +2750,7 @@
   padding: var(--bf-space-xxxs) var(--bf-space-xs);
   border: 1px solid var(--bf-color-light-16);
   border-radius: var(--bf-radius-button);
-  background-color: var(--bf-glass-strong);
+  background-color: var(--bf-glass-fill);
   color: var(--bf-ink-light);
   cursor: pointer;
   backdrop-filter: blur(var(--bf-glass-blur));
@@ -2779,7 +2779,7 @@
   padding: var(--bf-space-nano) var(--bf-space-xxxs);
   border: 1px solid var(--bf-color-light-16);
   border-radius: var(--bf-radius-button);
-  background-color: var(--bf-glass-strong);
+  background-color: var(--bf-glass-fill);
   color: var(--bf-ink-light);
   white-space: nowrap;
   backdrop-filter: blur(var(--bf-glass-blur));
@@ -3062,7 +3062,7 @@
   padding: var(--bf-space-xs);
   border: 1px solid var(--bf-color-light-16);
   border-radius: var(--bf-radius-md);
-  background-color: var(--bf-glass-medium);
+  background-color: var(--bf-glass-fill);
   backdrop-filter: blur(var(--bf-glass-blur));
   -webkit-backdrop-filter: blur(var(--bf-glass-blur));
 }
@@ -3190,7 +3190,7 @@
 .bf-final-cta .bf-site-footer__cta-panel,
 .bf-final-cta .bf-site-footer__legal {
   border: 1px solid var(--bf-color-light-16);
-  background-color: var(--bf-glass-medium);
+  background-color: var(--bf-glass-fill);
   backdrop-filter: blur(var(--bf-glass-blur));
   -webkit-backdrop-filter: blur(var(--bf-glass-blur));
 }
@@ -3400,7 +3400,7 @@
   padding: var(--bf-space-nano) var(--bf-space-xxxs);
   border: 1px solid var(--bf-color-light-16);
   border-radius: var(--bf-radius-button);
-  background-color: var(--bf-glass-medium);
+  background-color: var(--bf-glass-fill);
   color: var(--bf-ink-light);
   font-family: var(--bf-font-button);
   font-size: var(--bf-text-button-size);
