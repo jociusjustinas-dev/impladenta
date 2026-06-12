@@ -240,7 +240,7 @@
   --bf-nav-bar-height: 3.75rem;
   --bf-nav-bar-height-scrolled: 3rem;
   --bf-nav-shrink-max-inset: 5rem;
-  --bf-nav-menu-gap: var(--bf-space-xxs);
+  --bf-nav-menu-gap: 14px;
   --bf-trust-bar-padding: var(--bf-section-sm);
   --bf-trust-bar-gap: var(--bf-space-lg);
   --bf-trust-bar-icon-size: 2.75rem;

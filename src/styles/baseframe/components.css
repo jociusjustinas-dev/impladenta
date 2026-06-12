@@ -691,9 +691,7 @@
   --bf-nav-bar-pad-r: 0.5rem;
   --bf-nav-bar-gap: calc(0.875rem - var(--bf-nav-shrink-progress) * 0.25rem);
   --bf-nav-logo-max: calc(8.5rem - var(--bf-nav-shrink-progress) * 1.25rem);
-  --bf-nav-menu-gap: calc(
-    var(--bf-space-xxs) - var(--bf-nav-shrink-progress) * (var(--bf-space-xxs) - var(--bf-space-xxxs))
-  );
+  --bf-nav-menu-gap: calc(14px - var(--bf-nav-shrink-progress) * 2px);
   padding-top: calc(var(--bf-shell-padding) - var(--bf-nav-shrink-progress) * 4px);
 }
 
@@ -716,6 +714,12 @@
 
 .bf-nav-menu-inner {
   gap: var(--bf-nav-menu-gap);
+}
+
+@media screen and (min-width: 992px) {
+  .bf-nav-menu-inner .bf-nav-link {
+    padding-inline: 0.625rem;
+  }
 }
 
 .bf-nav-link {
@@ -1811,7 +1815,7 @@
   min-height: 28.44rem;
   align-items: flex-end;
   justify-content: center;
-  overflow: hidden;
+  overflow: visible;
   border-radius: var(--bf-radius-md);
   background-color: var(--bf-lift-two);
   padding: var(--bf-space-md) var(--bf-space-md) 0;
@@ -1822,6 +1826,7 @@
   width: 100%;
   max-width: 15.69rem;
   margin-inline: auto;
+  object-fit: contain;
 }
 
 .bf-why-bento__features {
