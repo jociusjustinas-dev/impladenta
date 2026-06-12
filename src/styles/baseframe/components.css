@@ -1823,9 +1823,9 @@
   align-items: flex-end;
   justify-content: center;
   overflow: hidden;
-  border-radius: var(--bf-radius-md) var(--bf-radius-md) 0 0;
+  border-radius: var(--bf-radius-md);
   background-color: #e6e0d6;
-  padding: var(--bf-space-md) var(--bf-space-sm) 0;
+  padding: var(--bf-space-md) var(--bf-space-md) 0;
 }
 
 .bf-why-bento__phone-image {
@@ -1833,9 +1833,9 @@
   width: 100%;
   max-width: 18.75rem;
   margin-inline: auto;
-  margin-bottom: 0;
-  object-fit: contain;
-  object-position: bottom center;
+  flex: none;
+  transform: translateY(8%) scale(1.1);
+  transform-origin: bottom center;
 }
 
 .bf-why-bento__features {
@@ -1943,11 +1943,14 @@
 
   .bf-why-bento__phone {
     min-height: 0;
-    padding: var(--bf-space-xs) var(--bf-space-xs) 0;
+    padding-block: var(--bf-space-xs);
+    padding-inline: var(--bf-space-xs);
+    padding-bottom: 0;
   }
 
   .bf-why-bento__phone-image {
     max-width: 14.5rem;
+    transform: translateY(6%) scale(1.08);
   }
 
   .bf-why-bento__media-image {
@@ -1978,6 +1981,7 @@
 
   .bf-why-bento__phone-image {
     max-width: 12.5rem;
+    transform: translateY(5%) scale(1.06);
   }
 }
 
@@ -1988,6 +1992,7 @@
 
   .bf-why-bento__phone-image {
     max-width: 11rem;
+    transform: translateY(4%) scale(1.05);
   }
 }
 
