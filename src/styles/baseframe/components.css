@@ -901,19 +901,31 @@
 }
 
 @media screen and (min-width: 992px) {
-  .bf-nav-menu {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 1;
-    width: max-content;
-    max-width: calc(100% - 22rem);
-    transform: translate(-50%, -50%);
+  .bf-nav-bar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    padding-inline: var(--bf-nav-bar-pad-x);
   }
 
-  .bf-nav-logo-wrap,
+  .bf-nav-logo-wrap {
+    grid-column: 1;
+    justify-self: start;
+    z-index: 2;
+  }
+
+  .bf-nav-menu {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    justify-self: center;
+    z-index: 1;
+    width: max-content;
+    max-width: calc(100% - 20rem);
+    transform: translateX(calc(var(--bf-nav-menu-optical-offset, 0px) * -1));
+  }
+
   .bf-nav-actions {
-    position: relative;
+    grid-column: 3;
+    justify-self: end;
     z-index: 2;
     flex: none;
   }

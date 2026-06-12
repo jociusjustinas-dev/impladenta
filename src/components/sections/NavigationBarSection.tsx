@@ -341,6 +341,9 @@ function NavDropdownTrigger({ label, open }: { label: string; open: boolean }) {
 
 export function NavigationBarSection() {
   const navShellRef = useRef<HTMLDivElement>(null)
+  const navBarRef = useRef<HTMLDivElement>(null)
+  const navLogoRef = useRef<HTMLAnchorElement>(null)
+  const navActionsRef = useRef<HTMLDivElement>(null)
   const servicesMenu = useAnimatedDropdown(350)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
@@ -370,6 +373,36 @@ export function NavigationBarSection() {
   }, [mobileOpen])
 
   useEffect(() => {
+    const bar = navBarRef.current
+    const logo = navLogoRef.current
+    const actions = navActionsRef.current
+    if (!bar || !logo || !actions) return
+
+    const syncMenuOffset = () => {
+      if (!window.matchMedia('(min-width: 992px)').matches) {
+        bar.style.removeProperty('--bf-nav-menu-optical-offset')
+        return
+      }
+
+      const logoWidth = logo.getBoundingClientRect().width
+      const actionsWidth = actions.getBoundingClientRect().width
+      const offset = (actionsWidth - logoWidth) / 2
+      bar.style.setProperty('--bf-nav-menu-optical-offset', `${offset}px`)
+    }
+
+    syncMenuOffset()
+    const observer = new ResizeObserver(syncMenuOffset)
+    observer.observe(logo)
+    observer.observe(actions)
+    window.addEventListener('resize', syncMenuOffset)
+
+    return () => {
+      observer.disconnect()
+      window.removeEventListener('resize', syncMenuOffset)
+    }
+  }, [])
+
+  useEffect(() => {
     document.body.style.overflow = mobileOpen ? 'hidden' : ''
     return () => {
       document.body.style.overflow = ''
@@ -385,8 +418,12 @@ export function NavigationBarSection() {
     >
       <div className="bf-shell-px z-[2] w-full bg-transparent">
         <div className="bf-nav-shell mx-auto w-full">
-          <div className="bf-nav-bar relative w-full overflow-visible rounded-bf-sm bg-lift-2">
+          <div
+            ref={navBarRef}
+            className="bf-nav-bar relative w-full overflow-visible rounded-bf-sm bg-lift-2"
+          >
             <a
+              ref={navLogoRef}
               href={routes.home}
               className="bf-nav-logo-wrap relative z-[2] shrink-0"
             >
@@ -411,7 +448,10 @@ export function NavigationBarSection() {
               </div>
             </nav>
 
-            <div className="bf-nav-actions relative z-[2] flex min-w-0 items-center justify-end gap-2.5 self-stretch overflow-visible max-[767px]:gap-2">
+            <div
+              ref={navActionsRef}
+              className="bf-nav-actions relative z-[2] flex min-w-0 items-center justify-end gap-2.5 self-stretch overflow-visible max-[767px]:gap-2"
+            >
               <HeaderPhoneDropdown />
 
               <div className="max-[991px]:hidden">
