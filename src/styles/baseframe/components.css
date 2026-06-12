@@ -884,6 +884,9 @@
 
 .bf-nav-bar {
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   min-height: calc(
     var(--bf-nav-bar-height) -
       (var(--bf-nav-bar-height) - var(--bf-nav-bar-height-scrolled)) * var(--bf-nav-shrink-progress)
@@ -894,23 +897,21 @@
 }
 
 @media screen and (min-width: 992px) {
-  .bf-nav-bar {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-    align-items: center;
-  }
-
-  .bf-nav-logo-wrap {
-    justify-self: start;
-  }
-
   .bf-nav-menu {
-    justify-self: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    width: max-content;
+    max-width: calc(100% - 22rem);
+    transform: translate(-50%, -50%);
   }
 
+  .bf-nav-logo-wrap,
   .bf-nav-actions {
+    position: relative;
+    z-index: 2;
     flex: none;
-    justify-self: end;
   }
 }
 

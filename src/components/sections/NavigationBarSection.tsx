@@ -385,7 +385,7 @@ export function NavigationBarSection() {
     >
       <div className="bf-shell-px z-[2] w-full bg-transparent">
         <div className="bf-nav-shell mx-auto w-full">
-          <div className="bf-nav-bar relative flex w-full items-center justify-between overflow-visible rounded-bf-sm bg-lift-2">
+          <div className="bf-nav-bar relative w-full overflow-visible rounded-bf-sm bg-lift-2">
             <a
               href={routes.home}
               className="bf-nav-logo-wrap relative z-[2] shrink-0"
@@ -411,7 +411,7 @@ export function NavigationBarSection() {
               </div>
             </nav>
 
-            <div className="bf-nav-actions relative z-[2] flex min-w-0 flex-1 items-center justify-end gap-2.5 self-stretch overflow-visible max-[767px]:gap-2">
+            <div className="bf-nav-actions relative z-[2] flex min-w-0 items-center justify-end gap-2.5 self-stretch overflow-visible max-[767px]:gap-2">
               <HeaderPhoneDropdown />
 
               <div className="max-[991px]:hidden">

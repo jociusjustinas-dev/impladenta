@@ -200,8 +200,7 @@ export const whyImpladentaContent = {
       'Kol gaminami dantys — privatus kambarys, televizorius. O fone groja ne „relax" fortepijonas, o normali muzika.',
     icon: 'comfort',
   } satisfies WhyImpladentaBlock,
-  phoneImage:
-    'https://byqsupply-components.netlify.app/baseframe/images/phone-widget_1phone-widget.avif',
+  phoneImage: '/images/impladenta-device.png',
   mediaImage: '/images/hero-consultation.png',
   cta: {
     label: 'Susipažinkite su klinika',
