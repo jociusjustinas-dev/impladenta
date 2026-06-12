@@ -69,6 +69,7 @@
   --bf-glass-medium: var(--bf-color-dark-32);
   --bf-glass-strong: var(--bf-color-dark-48);
   --bf-glass-faint: var(--bf-color-dark-8);
+  --bf-glass-blur: 16px;
 
   --bf-lift-one: var(--bf-color-lift-light);
   --bf-lift-two: var(--bf-color-lift-light-2);

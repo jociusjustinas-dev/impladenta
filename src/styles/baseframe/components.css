@@ -158,8 +158,8 @@
 .bf-glass-tile {
   border: 1px solid var(--bf-color-light-16);
   background-color: var(--bf-glass-medium);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(var(--bf-glass-blur));
+  -webkit-backdrop-filter: blur(var(--bf-glass-blur));
 }
 
 .bf-glass-tile--soft {
@@ -183,8 +183,8 @@
   color: var(--bf-btn-primary-text);
   border-color: var(--bf-color-light-16);
   background-color: var(--bf-glass-medium);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(var(--bf-glass-blur));
+  -webkit-backdrop-filter: blur(var(--bf-glass-blur));
 }
 
 .bf-btn--nav-cta:hover {
@@ -222,8 +222,8 @@
   z-index: 1;
   border: 1px solid transparent;
   border-radius: var(--bf-radius-button);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(var(--bf-glass-blur));
+  -webkit-backdrop-filter: blur(var(--bf-glass-blur));
   transform: scale(1);
   transform-origin: center;
   transition:
@@ -1019,8 +1019,8 @@
   padding: var(--bf-space-xxxs);
   border: 1px solid var(--bf-color-light-16);
   background-color: var(--bf-glass-strong);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(var(--bf-glass-blur));
+  -webkit-backdrop-filter: blur(var(--bf-glass-blur));
 }
 
 .bf-hero-timeline-card__title {
@@ -1976,8 +1976,8 @@
   gap: var(--bf-space-nano);
   border-radius: var(--bf-radius-button);
   padding: var(--bf-space-nano) var(--bf-space-xxxs);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(var(--bf-glass-blur));
+  -webkit-backdrop-filter: blur(var(--bf-glass-blur));
 }
 
 .bf-section-intro {
@@ -2195,8 +2195,8 @@
   background-color: var(--bf-glass-medium);
   color: var(--bf-ink-light);
   cursor: pointer;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(var(--bf-glass-blur));
+  -webkit-backdrop-filter: blur(var(--bf-glass-blur));
   box-shadow:
     0 -1px 0 0 var(--bf-color-light-8),
     0 1px 0 0 var(--bf-color-dark-32);
@@ -2312,8 +2312,8 @@
   background-color: var(--bf-glass-medium);
   color: var(--bf-ink-light);
   cursor: pointer;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(var(--bf-glass-blur));
+  -webkit-backdrop-filter: blur(var(--bf-glass-blur));
   box-shadow:
     0 -1px 0 0 var(--bf-color-light-8),
     0 1px 0 0 var(--bf-color-dark-32);
@@ -2351,8 +2351,8 @@
   border-radius: var(--bf-radius-button);
   background-color: var(--bf-glass-medium);
   padding: var(--bf-space-nano) var(--bf-space-xxxs);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(var(--bf-glass-blur));
+  -webkit-backdrop-filter: blur(var(--bf-glass-blur));
 }
 
 .bf-team-teaser__card-copy {
@@ -2753,8 +2753,8 @@
   background-color: var(--bf-glass-strong);
   color: var(--bf-ink-light);
   cursor: pointer;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(var(--bf-glass-blur));
+  -webkit-backdrop-filter: blur(var(--bf-glass-blur));
   transition:
     background-color 0.3s ease,
     transform 0.3s ease;
@@ -2782,8 +2782,8 @@
   background-color: var(--bf-glass-strong);
   color: var(--bf-ink-light);
   white-space: nowrap;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(var(--bf-glass-blur));
+  -webkit-backdrop-filter: blur(var(--bf-glass-blur));
 }
 
 .bf-before-after__quote-card {
@@ -3063,8 +3063,8 @@
   border: 1px solid var(--bf-color-light-16);
   border-radius: var(--bf-radius-md);
   background-color: var(--bf-glass-medium);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(var(--bf-glass-blur));
+  -webkit-backdrop-filter: blur(var(--bf-glass-blur));
 }
 
 .bf-financing-teaser__price {
@@ -3191,8 +3191,8 @@
 .bf-final-cta .bf-site-footer__legal {
   border: 1px solid var(--bf-color-light-16);
   background-color: var(--bf-glass-medium);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(var(--bf-glass-blur));
+  -webkit-backdrop-filter: blur(var(--bf-glass-blur));
 }
 
 .bf-site-footer__legal {
@@ -3407,8 +3407,8 @@
   line-height: var(--bf-text-button-line);
   font-weight: var(--bf-weight-button);
   cursor: pointer;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(var(--bf-glass-blur));
+  -webkit-backdrop-filter: blur(var(--bf-glass-blur));
   transition:
     background-color 0.3s ease,
     border-color 0.3s ease,
